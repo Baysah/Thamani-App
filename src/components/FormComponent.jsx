@@ -14,6 +14,7 @@ import * as Yup from 'yup';
 import FormOne from './Forms/FormOne';
 import FormTwo from './Forms/FormTwo';
 import FormThree from './Forms/FormThree';
+import FormFour from './Forms/FormFour';
 import MultiStepForm, { FormStep } from './MultiStepForm';
 
 
@@ -32,7 +33,7 @@ const FormComponent = () => {
         window.sessionStorage.setItem('applicationIDCode', JSON.stringify(applicationIDCode));
     }, [applicationIDCode]);
 
-    const INITIAL_FROM_STATE = {
+    const INITIAL_FORM_STATE = {
       app_id_code_box1: '',
       app_id_code: '',
       depart_port_code: '',
@@ -42,12 +43,14 @@ const FormComponent = () => {
       remote_preparer_filter_code: '',
       remote_preparer_office_code: '',
       app_id_code_new: '',
+      country_code: '',
+      api_data: ''
     };
 
   return (
     <>
       <MultiStepForm
-        initialValues={{ ...INITIAL_FROM_STATE }}
+        initialValues={{ ...INITIAL_FORM_STATE }}
         onSubmit={(values) => {
           alert(JSON.stringify(values, null, 2));
         }}
@@ -76,6 +79,12 @@ const FormComponent = () => {
           })}
         >
           <FormTwo />
+        </FormStep>
+        <FormStep
+          stepName="Form Three"
+          onSubmit={() => console.log('Step3 onSubmit')}
+        >
+          <FormThree />
         </FormStep>
       </MultiStepForm>
     </>

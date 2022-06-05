@@ -2,7 +2,7 @@ import React from 'react';
 import { TextField } from '@mui/material';
 import { useField } from 'formik';
 
-const InputField= ({ name, disabled, ...otherProps }) => {
+const InputField = ({ name, disabled = false, ...otherProps }) => {
   const [field, meta] = useField(name);
   const configTextField = {
     ...field,
@@ -13,7 +13,7 @@ const InputField= ({ name, disabled, ...otherProps }) => {
   return (
     <>
       <TextField
-      disabled={disabled}
+        disabled={disabled}
         {...configTextField}
         error={
           meta.touched && meta.error ? (
