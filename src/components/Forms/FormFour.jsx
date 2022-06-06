@@ -3,7 +3,7 @@ import { Grid, MenuItem } from '@mui/material';
 import InputField from '../FormsUI/TextField/index';
 import SelectField from '../FormsUI/Select/index';
 import PortCodes from '../../data/portCode';
-import CheckBox from '../FormsUI/CheckBox/index';
+import CheckBox from '../FormsUI/Checkbox/index';
 
 const FormFour = ({}) => {
   
