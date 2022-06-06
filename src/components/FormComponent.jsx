@@ -27,7 +27,7 @@ const FormComponent = () => {
         if (sessionApplicationIDCode !== null) {
             setApplicationIDCode(JSON.parse(sessionApplicationIDCode));
         }
-    })
+    },[])
 
     useEffect(() => {
         window.sessionStorage.setItem('applicationIDCode', JSON.stringify(applicationIDCode));
