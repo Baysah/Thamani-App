@@ -44,7 +44,8 @@ const FormComponent = () => {
       remote_preparer_office_code: '',
       app_id_code_new: '',
       country_code: '',
-      api_data: ''
+      agency_type: '',
+      agency: ''
     };
 
   return (
@@ -81,7 +82,7 @@ const FormComponent = () => {
           <FormTwo />
         </FormStep>
         <FormStep
-          stepName="Form Three"
+          stepName="Agency"
           onSubmit={() => console.log('Step3 onSubmit')}
         >
           <FormThree />

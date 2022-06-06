@@ -105,11 +105,6 @@ const FormTwo = ({  }) => {
             label="Remote Preparer Office Code"
           />
         </Grid>
-        <Grid item xs={12}>
-          <SelectField name="api_data" label="API">
-            {PortOptions}
-          </SelectField>
-        </Grid>
       </Grid>
     </>
   );
