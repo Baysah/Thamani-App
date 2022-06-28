@@ -65,7 +65,7 @@ const FormThree = () => {
   return (
     <>
       <Grid container spacing={2}>
-        <Grid item xs={6}>
+        <Grid item xs={4}>
           <SelectField
             name="agency_type"
             label="Agency Type"
@@ -74,10 +74,16 @@ const FormThree = () => {
             {AgencyTypeOptions}
           </SelectField>
         </Grid>
-        <Grid item xs={6}>
+        <Grid item xs={4}>
           <SelectField name="agency" label="Agency">
             {AgencyOptions}
           </SelectField>
+        </Grid>
+        <Grid item xs={4}>
+          <InputField
+            name="agency"
+            label="Agency Code"
+          />
         </Grid>
       </Grid>
     </>
